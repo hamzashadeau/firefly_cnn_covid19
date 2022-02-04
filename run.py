@@ -1,16 +1,16 @@
 import streamlit as st
-import tensorflow as tf
+#import tensorflow as tf
 import streamlit as st
 from keras.preprocessing.image import img_to_array
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
 from pipreqs import pipreqs
-
+import keras
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.keras.models.load_model('Cnn+6_firefly.h5')
+    model = keras.models.load_model('Cnn+6_firefly.h5')
     return model
 
 
